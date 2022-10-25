@@ -1,0 +1,11 @@
+{
+  "name": "last-rows",
+  "description": "",
+  "sampler": [
+    {
+      "LastRowsExecutionDataSampler": {
+        "sampleSize": "100"
+      }
+    }
+  ]
+}

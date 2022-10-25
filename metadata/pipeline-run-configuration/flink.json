@@ -1,0 +1,38 @@
+{
+  "engineRunConfiguration": {
+    "BeamFlinkPipelineEngine": {
+      "streamingHopTransformsBufferSize": "",
+      "flinkObjectReuse": "",
+      "flinkMaxBundleSize": "100",
+      "flinkCheckpointingMode": "",
+      "flinkExternalizedCheckpointsEnabled": "",
+      "flinkCheckpointingInterval": "1000",
+      "flinkShutdownSourcesAfterIdleMs": "",
+      "flinkCheckpointTimeoutMillis": "",
+      "flinkFailingOnCheckpointingErrors": "",
+      "flinkAutoWatermarkInterval": "",
+      "fatJar": "",
+      "flinkMaxBundleTimeMills": "500",
+      "transformPluginClasses": "",
+      "xpPluginClasses": "",
+      "flinkNumberOfExecutionRetries": "",
+      "flinkParallelism": "2",
+      "flinkDisableMetrics": "",
+      "userAgent": "Hop",
+      "pluginsToStage": "",
+      "flinkRetainExternalizedCheckpointsOnCancellation": "",
+      "flinkExecutionModeForBatch": "",
+      "tempLocation": "file:///tmp",
+      "flinkMinPauseBetweenCheckpoints": "",
+      "flinkMaster": "[auto]",
+      "flinkExecutionRetryDelay": "",
+      "streamingHopTransformsFlushInterval": "",
+      "flinkLatencyTrackingInterval": ""
+    }
+  },
+  "configurationVariables": [],
+  "name": "flink",
+  "description": "",
+  "executionInfoLocationName": "local",
+  "dataProfile": "last-rows"
+}

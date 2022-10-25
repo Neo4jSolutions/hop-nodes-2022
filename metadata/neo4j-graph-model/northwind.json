@@ -1,0 +1,794 @@
+{
+  "relationships": [
+    {
+      "nodeSource": "Product",
+      "name": "Product - Category",
+      "description": "",
+      "nodeTarget": "Category",
+      "label": "HAS_CATEGORY",
+      "properties": []
+    },
+    {
+      "nodeSource": "Product",
+      "name": "Product - Supplier",
+      "description": "",
+      "nodeTarget": "Supplier",
+      "label": "HAS_SUPPLIER",
+      "properties": []
+    },
+    {
+      "nodeSource": "Employee",
+      "name": "Employee - Employee",
+      "description": "",
+      "nodeTarget": "Employee",
+      "label": "REPORTS_TO",
+      "properties": []
+    },
+    {
+      "nodeSource": "Order",
+      "name": "Order - Customer",
+      "description": "",
+      "nodeTarget": "Customer",
+      "label": "ORDER_FROM_CUSTOMER",
+      "properties": []
+    },
+    {
+      "nodeSource": "Order",
+      "name": "Order - Employee",
+      "description": "",
+      "nodeTarget": "Employee",
+      "label": "HANDLED_BY",
+      "properties": []
+    },
+    {
+      "nodeSource": "Order",
+      "name": "Order - OrderItem",
+      "description": "",
+      "nodeTarget": "OrderItem",
+      "label": "HAS_ITEM",
+      "properties": []
+    },
+    {
+      "nodeSource": "OrderItem",
+      "name": "OrderItem - Product",
+      "description": "",
+      "nodeTarget": "Product",
+      "label": "ORDERED_PRODUCT",
+      "properties": []
+    }
+  ],
+  "nodes": [
+    {
+      "presentation": {
+        "x": 389,
+        "y": 951
+      },
+      "name": "Customer",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "customerID",
+          "description": "",
+          "type": "String",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "companyName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "contactName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "contactTitle",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "address",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "city",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "region",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "postalCode",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "country",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "phone",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "fax",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Customer"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 187,
+        "y": 154
+      },
+      "name": "Category",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "categoryID",
+          "description": "",
+          "type": "Integer",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "categoryName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "description",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Category"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 780,
+        "y": 184
+      },
+      "name": "Product",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "productID",
+          "description": "",
+          "type": "String",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "companyName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "contactName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "contactTitle",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "address",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "city",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "region",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "postalCode",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "country",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "phone",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "fax",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Product"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 137,
+        "y": 454
+      },
+      "name": "Supplier",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "supplierID",
+          "description": "",
+          "type": "Integer",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "companyName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "contactName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "contactTitle",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "address",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "city",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "region",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "postalCode",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "country",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "phone",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "fax",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "homePage",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Supplier"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 731,
+        "y": 797
+      },
+      "name": "Employee",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "employeeID",
+          "description": "",
+          "type": "Integer",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "lastName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "firstName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "title",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "titleOfCourtesy",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "birthDate",
+          "description": "",
+          "type": "LocalDateTime",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "hireDate",
+          "description": "",
+          "type": "LocalDateTime",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "address",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "city",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "region",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "postalCode",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "country",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "homePhone",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "extension",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "photo",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "notes",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "reportsTo",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "photoPath",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Employee"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 715,
+        "y": 507
+      },
+      "name": "OrderItem",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "orderItemID",
+          "description": "",
+          "type": "String",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "unitPrice",
+          "description": "",
+          "type": "Float",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "quantity",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "discount",
+          "description": "",
+          "type": "Float",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "OrderItem"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 477,
+        "y": 645
+      },
+      "name": "Order",
+      "description": "",
+      "properties": [
+        {
+          "indexed": true,
+          "unique": true,
+          "name": "orderID",
+          "description": "",
+          "type": "Integer",
+          "mandatory": true,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "orderDate",
+          "description": "",
+          "type": "LocalDateTime",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "requiredDate",
+          "description": "",
+          "type": "LocalDateTime",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shippedDate",
+          "description": "",
+          "type": "LocalDateTime",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipVia",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "freight",
+          "description": "",
+          "type": "Float",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipName",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipAddress",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipCity",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipRegion",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipPostalCode",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "shipCountry",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Order"
+      ]
+    }
+  ],
+  "name": "northwind",
+  "description": ""
+}

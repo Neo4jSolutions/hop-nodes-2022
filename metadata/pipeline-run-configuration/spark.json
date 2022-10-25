@@ -1,0 +1,28 @@
+{
+  "engineRunConfiguration": {
+    "BeamSparkPipelineEngine": {
+      "sparkMinReadTimeMillis": "500",
+      "sparkMaster": "spark://canis:7077",
+      "sparkEnableSparkMetricSinks": false,
+      "streamingHopTransformsBufferSize": "",
+      "sparkCheckpointDir": "file:///tmp",
+      "sparkMaxRecordsPerBatch": "1000",
+      "userAgent": "Hop",
+      "sparkBatchIntervalMillis": "1000",
+      "pluginsToStage": "",
+      "tempLocation": "/tmp",
+      "sparkCheckpointDurationMillis": "5000",
+      "fatJar": "/opt/hop/hop-fat.jar",
+      "sparkBundleSize": "5000",
+      "sparkReadTimePercentage": "",
+      "streamingHopTransformsFlushInterval": "",
+      "transformPluginClasses": "",
+      "xpPluginClasses": ""
+    }
+  },
+  "configurationVariables": [],
+  "name": "spark",
+  "description": "",
+  "executionInfoLocationName": "",
+  "dataProfile": ""
+}

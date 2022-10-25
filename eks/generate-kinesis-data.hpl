@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>generate-kinesis-data</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2022/10/21 16:29:53.570</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2022/10/21 16:29:53.570</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>JSON output</from>
+      <to>Beam Kinesis Produce</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Random values</from>
+      <to>JSON output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>oo rows (10/s)</from>
+      <to>sysdate</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>sysdate</from>
+      <to>Random values</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>Beam Kinesis Produce</name>
+    <type>BeamKinesisProduce</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <access_key>15G6HAF54RBWFNQGK8R2</access_key>
+    <config_options>
+      <config_option>
+        <parameter>CollectionMaxCount</parameter>
+        <value>10</value>
+      </config_option>
+    </config_options>
+    <data_field>message</data_field>
+    <message_type>String</message_type>
+    <partition_key_field>hop</partition_key_field>
+    <secret_key>Encrypted 797767527268752f64496a367136797245706f574d7a6b40ceedd7a501c09cd4f932fd7df4a7bfff</secret_key>
+    <stream_name>Encrypted 2be98afc86aa79394aa1aa675939aa0ca</stream_name>
+    <attributes/>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>112</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>JSON output</name>
+    <type>JsonOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <addToResult>N</addToResult>
+    <createParentFolder>N</createParentFolder>
+    <dateInFilename>N</dateInFilename>
+    <doNotOpenNewFileInit>N</doNotOpenNewFileInit>
+    <encoding>UTF-8</encoding>
+    <fileAppended>N</fileAppended>
+    <fileAsCommand>N</fileAsCommand>
+    <jsonBloc>message</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <fields>
+      <field>
+        <element>sysdate</element>
+        <name>sysdate</name>
+      </field>
+      <field>
+        <element>someString</element>
+        <name>someString</name>
+      </field>
+      <field>
+        <element>someUUID</element>
+        <name>someUUID</name>
+      </field>
+      <field>
+        <element>someNumber</element>
+        <name>someNumber</name>
+      </field>
+    </fields>
+    <outputValue>message</outputValue>
+    <partNrInFilename>N</partNrInFilename>
+    <specifyingFormat>N</specifyingFormat>
+    <timeInFilename>N</timeInFilename>
+    <transformNrInFilename>N</transformNrInFilename>
+    <attributes/>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>112</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Random values</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>someString</name>
+        <type>random string</type>
+      </field>
+      <field>
+        <name>someUUID</name>
+        <type>random uuid</type>
+      </field>
+      <field>
+        <name>someNumber</name>
+        <type>random number</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>112</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>oo rows (10/s)</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+</fields>
+    <interval_in_ms>100</interval_in_ms>
+    <last_time_field/>
+    <never_ending>Y</never_ending>
+    <limit/>
+    <row_time_field/>
+    <attributes/>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>112</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>sysdate</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>sysdate</name>
+        <type>system date (variable)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>112</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>

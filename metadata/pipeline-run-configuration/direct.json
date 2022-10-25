@@ -1,0 +1,20 @@
+{
+  "engineRunConfiguration": {
+    "BeamDirectPipelineEngine": {
+      "tempLocation": "file:///tmp",
+      "streamingHopTransformsBufferSize": "",
+      "number_of_workers": "4",
+      "fatJar": "",
+      "userAgent": "Hop",
+      "streamingHopTransformsFlushInterval": "",
+      "transformPluginClasses": "",
+      "pluginsToStage": "",
+      "xpPluginClasses": ""
+    }
+  },
+  "configurationVariables": [],
+  "name": "direct",
+  "description": "",
+  "executionInfoLocationName": "graph",
+  "dataProfile": "last-rows"
+}

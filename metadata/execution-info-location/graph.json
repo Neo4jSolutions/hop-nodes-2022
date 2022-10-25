@@ -1,0 +1,13 @@
+{
+  "executionInfoLocation": {
+    "neo4j-location": {
+      "pluginName": "Neo4j location",
+      "pluginId": "neo4j-location",
+      "connection": "neo4j"
+    }
+  },
+  "dataLoggingDelay": "5000",
+  "name": "graph",
+  "description": "",
+  "dataLoggingInterval": "5000"
+}
