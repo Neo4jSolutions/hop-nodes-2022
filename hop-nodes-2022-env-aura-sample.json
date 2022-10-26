@@ -1,0 +1,35 @@
+{
+  "variables" : [ {
+    "name" : "NEO4J_AUTOMATIC",
+    "value" : "N",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_HOSTNAME",
+    "value" : "12a3bc45.databases.neo4j.io",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PORT",
+    "value" : "7687",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_USERNAME",
+    "value" : "neo4j",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PASSWORD",
+    "value" : "AVCdefg1Ghij2jK3L4NboPqRsTuV_w5XTz6AbcDeFgh",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_ROUTING",
+    "value" : "Y",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_POLICY",
+    "value" : "neo4j+s",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_ENCRYPTION",
+    "value" : "Y",
+    "description" : ""
+  } ]
+}
