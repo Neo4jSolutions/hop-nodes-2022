@@ -1,0 +1,23 @@
+{
+  "variables" : [ {
+    "name" : "NEO4J_AUTOMATIC",
+    "value" : "Y",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_HOSTNAME",
+    "value" : "localhost",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PORT",
+    "value" : "7687",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_USERNAME",
+    "value" : "neo4j",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PASSWORD",
+    "value" : "your-password",
+    "description" : ""
+  } ]
+}
